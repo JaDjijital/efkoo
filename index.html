@@ -559,6 +559,19 @@
     });
   }, { threshold: .15 });
   cards.forEach(c => cardObserver.observe(c));
+
+
+// ---- BACKGROUND MUSIC ----
+const bgMusic = document.getElementById('bgMusic');
+
+bgMusic.volume = 0.20;
+
+document.addEventListener('click', () => {
+  bgMusic.play().catch(error => {
+    console.log('Müzik başlatılamadı:', error);
+  });
+}, { once: true });
+
 </script>
 </body>
 </html>
